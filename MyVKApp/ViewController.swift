@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var appNameLabel: UILabel!
@@ -73,13 +74,6 @@ class ViewController: UIViewController {
         }
     }
     
-//    extension ViewController: UITableViewDataSource {
-//        func numberOfSections(in tableView: UITableView) -> Int {
-//            return 1
-//        }
-//
-//
-//    }
 
     
    
