@@ -8,8 +8,11 @@
 
 import UIKit
 
-class UserImgController: UICollectionViewController {
 
+class UserImgController: UICollectionViewController {
+    
+    var friendsForGettingPhoto: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,24 +36,23 @@ class UserImgController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
-    }
+        return friendsForGettingPhoto.userPhoto.count
+    } 
 
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserPhoros", for: indexPath) as! UserImgCell
-//        let friend =
-//        cell.userImg.image =
-//
-//        // Configure the cell
-//
-//        return cell
-//    }
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserPhotos", for: indexPath) as! UserImgCell
+        cell.userImg.image = friendsForGettingPhoto.userPhoto[indexPath.row]
+
+        // Configure the cell
+//        print(friendsForGettingPhoto.name)
+        return cell
+    }
 
     // MARK: UICollectionViewDelegate
 

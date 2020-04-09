@@ -9,18 +9,9 @@
 import UIKit
 
 
+
 class MyFriendsController: UITableViewController {
 
-    
-    
-    var friends = [
-        User(name: "Эльвина Мещерякова", avatar: UIImage(named: "girl.png")!, userPhotos: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-        User(name: "Леон Мещеряков", avatar: UIImage(named: "boy.png")!, userPhotos: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-        User(name: "Ильвир Гайнуллин", avatar: UIImage(named: "boy.png")!, userPhotos: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-        User(name: "Айгуль Саетгареева", avatar: UIImage(named: "girl.png")!, userPhotos: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-        User(name: "Кир Горелкин", avatar: UIImage(named: "boy.png")!, userPhotos: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +32,14 @@ class MyFriendsController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return friends.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let friendController = segue.destination as? UserImgController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                friendController.friendsForGettingPhoto = friends[indexPath.row]
+            }
+        }
     }
 
     

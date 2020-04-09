@@ -13,10 +13,12 @@ class MyGroupsController: UITableViewController {
     @IBAction func addGroup(seque: UIStoryboardSegue) {
         if seque.identifier == "addGroup" {
             guard let AllGroupsController = seque.source as? AllGroupsController else {return}
-            
+
             if let indexPath = AllGroupsController.tableView.indexPathForSelectedRow {
                 let group = AllGroupsController.allGroups[indexPath.row]
-                myGroups.append(group)
+                if !myGroups.contains(group) {
+                    myGroups.append(group)
+                }
                 tableView.reloadData()
             }
         }
