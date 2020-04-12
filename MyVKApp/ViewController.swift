@@ -8,7 +8,26 @@
 
 import UIKit
 
-
+class MainScreenView: UIView {
+    
+    var mainScreenLayer: CAGradientLayer { return layer as! CAGradientLayer }
+    
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.self
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+               
+        mainScreenLayer.colors = [
+            UIColor.white.cgColor,
+            UIColor.darkGray.cgColor]
+//        gradientLayer.locations = [0,1]
+        mainScreenLayer.startPoint = CGPoint.zero
+        mainScreenLayer.endPoint = CGPoint(x: 0, y: 1)
+        
+    }
+}
 
 class ViewController: UIViewController {
 

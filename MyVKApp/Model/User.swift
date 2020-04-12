@@ -16,9 +16,9 @@ struct User {
 
 
 var friends: [User] = [
-    User(name: "Эльвина Мещерякова", avatar: UIImage(named: "girl.png")!, userPhoto: [UIImage(named: "girl")!, UIImage(named: "boy")!, UIImage(named: "girl")!]),
-    User(name: "Леон Мещеряков", avatar: UIImage(named: "boy.png")!, userPhoto: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-    User(name: "Ильвир Гайнуллин", avatar: UIImage(named: "boy.png")!, userPhoto: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-    User(name: "Айгуль Саетгареева", avatar: UIImage(named: "girl.png")!, userPhoto: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
-    User(name: "Кир Горелкин", avatar: UIImage(named: "boy.png")!, userPhoto: [UIImage(named: "girl.png")!, UIImage(named: "boy.png")!, UIImage(named: "girl.png")!]),
+    User(name: "Эльвина Мещерякова", avatar: UIImage(named: "female1")!, userPhoto: [UIImage(named: "female1")!, UIImage(named: "female2")!, UIImage(named: "male3")!]),
+    User(name: "Леон Мещеряков", avatar: UIImage(named: "male3")!, userPhoto: [UIImage(named: "female1")!, UIImage(named: "male3")!, UIImage(named: "male2")!]),
+    User(name: "Ильвир Гайнуллин", avatar: UIImage(named: "male2")!, userPhoto: [UIImage(named: "male3")!, UIImage(named: "male2")!, UIImage(named: "female2")!]),
+    User(name: "Айгуль Саетгареева", avatar: UIImage(named: "female2")!, userPhoto: [UIImage(named: "male2")!, UIImage(named: "female2")!, UIImage(named: "male3")!]),
+    User(name: "Кир Горелкин", avatar: UIImage(named: "male1")!, userPhoto: [UIImage(named: "female1")!, UIImage(named: "male1")!, UIImage(named: "male3")!]),
 ]

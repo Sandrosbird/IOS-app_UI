@@ -10,13 +10,19 @@ import UIKit
 
 class AllGroupsController: UITableViewController {
     
-    var allGroups = [
-        "Пикабу",
-        "Икея Россия",
-        "Типичный дизайнер",
-        "HYPER PC",
-        "NVIDIA",
-        "GeekBrains"
+    var allGroups: [Group] = [
+        Group(name: "Пикабу", titleImg: UIImage(named: "peekaboo")!),
+        Group(name: "Икея Россия", titleImg: UIImage(named: "ikea")!),
+        Group(name: "Типичный Дизайнер", titleImg: UIImage(named: "designerGroup")!),
+        Group(name: "HYPER PC", titleImg: UIImage(named: "hyperPC")!),
+        Group(name: "NVIDIA", titleImg: UIImage(named: "nvidia")!),
+        Group(name: "GeekBrains", titleImg: UIImage(named: "geekbrains")!)
+//        "Пикабу",
+//        "Икея Россия",
+//        "Типичный дизайнер",
+//        "HYPER PC",
+//        "NVIDIA",
+//        "GeekBrains"
     ]
     
 
@@ -46,7 +52,9 @@ class AllGroupsController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as! AllGroupsCell
         let group = allGroups[indexPath.row]
-        cell.groupName.text = group
+        cell.groupName.text = group.name
+        cell.groupImg.image = group.titleImg
+        
 
         // Configure the cell...
 

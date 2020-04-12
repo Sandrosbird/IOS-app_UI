@@ -12,6 +12,8 @@ import UIKit
 
 class MyFriendsController: UITableViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +52,7 @@ class MyFriendsController: UITableViewController {
         cell.friendIcon.image = friend.avatar
 
         // Configure the cell...
-
+        
         return cell
     }
 

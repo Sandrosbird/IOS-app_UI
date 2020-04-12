@@ -16,8 +16,8 @@ class MyGroupsController: UITableViewController {
 
             if let indexPath = AllGroupsController.tableView.indexPathForSelectedRow {
                 let group = AllGroupsController.allGroups[indexPath.row]
-                if !myGroups.contains(group) {
-                    myGroups.append(group)
+                if !myGroups.contains(group.self) {
+                    myGroups.append(group.self)
                 }
                 tableView.reloadData()
             }
@@ -26,7 +26,7 @@ class MyGroupsController: UITableViewController {
     
     
     //Поменять на нормальные названия
-    var myGroups: [String] = []
+    var myGroups: [Group] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,8 @@ class MyGroupsController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! MyGroupCell
         let group = myGroups[indexPath.row]
-        cell.groupName.text = group
+        cell.groupName.text = group.name
+        cell.groupImg.image = group.titleImg
 
         // Configure the cell...
 

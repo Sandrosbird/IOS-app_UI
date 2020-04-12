@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761DFF962443859D00CF9160 /* IconShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DFF952443859D00CF9160 /* IconShadow.swift */; };
+		761DFF982443A77700CF9160 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DFF972443A77700CF9160 /* LikeButton.swift */; };
 		765ABFB7243A5CEF00EB5948 /* MyFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765ABFB6243A5CEF00EB5948 /* MyFriendsController.swift */; };
 		765ABFB9243A5D1700EB5948 /* MyFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765ABFB8243A5D1700EB5948 /* MyFriendCell.swift */; };
 		765ABFBB243A619C00EB5948 /* MyGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765ABFBA243A619C00EB5948 /* MyGroupsController.swift */; };
@@ -22,9 +24,12 @@
 		767D4A5F242C106800F07BA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767D4A5D242C106800F07BA9 /* Main.storyboard */; };
 		767D4A61242C106A00F07BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767D4A60242C106A00F07BA9 /* Assets.xcassets */; };
 		767D4A64242C106A00F07BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767D4A62242C106A00F07BA9 /* LaunchScreen.storyboard */; };
+		76AF96BB2440CC6B005DB4CB /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AF96BA2440CC6B005DB4CB /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		761DFF952443859D00CF9160 /* IconShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconShadow.swift; sourceTree = "<group>"; };
+		761DFF972443A77700CF9160 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		765ABFB6243A5CEF00EB5948 /* MyFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsController.swift; sourceTree = "<group>"; };
 		765ABFB8243A5D1700EB5948 /* MyFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendCell.swift; sourceTree = "<group>"; };
 		765ABFBA243A619C00EB5948 /* MyGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsController.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		767D4A60242C106A00F07BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		767D4A63242C106A00F07BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		767D4A65242C106A00F07BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76AF96BA2440CC6B005DB4CB /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +97,13 @@
 				760AB3742438AB1D002A4552 /* Model */,
 				765ABFB6243A5CEF00EB5948 /* MyFriendsController.swift */,
 				765ABFB8243A5D1700EB5948 /* MyFriendCell.swift */,
+				76AF96BA2440CC6B005DB4CB /* ImageView.swift */,
 				765ABFBC243A61B500EB5948 /* MyGroupCell.swift */,
 				765ABFBA243A619C00EB5948 /* MyGroupsController.swift */,
+				761DFF952443859D00CF9160 /* IconShadow.swift */,
 				765ABFC1243B2CB100EB5948 /* AllGroupsCell.swift */,
 				765ABFBF243B2C9100EB5948 /* AllGroupsController.swift */,
+				761DFF972443A77700CF9160 /* LikeButton.swift */,
 				765ABFC3243B4BF400EB5948 /* UserImgController.swift */,
 				765ABFC5243B4C0A00EB5948 /* UserImgCell.swift */,
 				767D4A62242C106A00F07BA9 /* LaunchScreen.storyboard */,
@@ -176,6 +185,7 @@
 			files = (
 				765ABFC4243B4BF400EB5948 /* UserImgController.swift in Sources */,
 				765ABFC0243B2C9200EB5948 /* AllGroupsController.swift in Sources */,
+				761DFF962443859D00CF9160 /* IconShadow.swift in Sources */,
 				765ABFC6243B4C0A00EB5948 /* UserImgCell.swift in Sources */,
 				765ABFCA243B4E4900EB5948 /* Group.swift in Sources */,
 				767D4A5C242C106800F07BA9 /* ViewController.swift in Sources */,
@@ -185,6 +195,8 @@
 				767D4A58242C106800F07BA9 /* AppDelegate.swift in Sources */,
 				765ABFB9243A5D1700EB5948 /* MyFriendCell.swift in Sources */,
 				765ABFC2243B2CB100EB5948 /* AllGroupsCell.swift in Sources */,
+				76AF96BB2440CC6B005DB4CB /* ImageView.swift in Sources */,
+				761DFF982443A77700CF9160 /* LikeButton.swift in Sources */,
 				765ABFC8243B4DFF00EB5948 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WUWQJC8JT4;
 				INFOPLIST_FILE = MyVKApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WUWQJC8JT4;
 				INFOPLIST_FILE = MyVKApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

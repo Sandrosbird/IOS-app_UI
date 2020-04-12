@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "girl.png",
+      "filename" : "ikea.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "girl-1.png",
+      "filename" : "ikea-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "girl-2.png",
+      "filename" : "ikea-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
