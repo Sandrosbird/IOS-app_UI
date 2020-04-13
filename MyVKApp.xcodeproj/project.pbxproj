@@ -70,6 +70,28 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		761DFF992444910C00CF9160 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				765ABFC3243B4BF400EB5948 /* UserImgController.swift */,
+				765ABFC5243B4C0A00EB5948 /* UserImgCell.swift */,
+				765ABFB6243A5CEF00EB5948 /* MyFriendsController.swift */,
+				765ABFB8243A5D1700EB5948 /* MyFriendCell.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		761DFF9A2444912B00CF9160 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				765ABFBC243A61B500EB5948 /* MyGroupCell.swift */,
+				765ABFBA243A619C00EB5948 /* MyGroupsController.swift */,
+				765ABFC1243B2CB100EB5948 /* AllGroupsCell.swift */,
+				765ABFBF243B2C9100EB5948 /* AllGroupsController.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
 		767D4A4B242C106800F07BA9 = {
 			isa = PBXGroup;
 			children = (
@@ -90,22 +112,16 @@
 		767D4A56242C106800F07BA9 /* MyVKApp */ = {
 			isa = PBXGroup;
 			children = (
+				767D4A5D242C106800F07BA9 /* Main.storyboard */,
 				767D4A57242C106800F07BA9 /* AppDelegate.swift */,
 				767D4A5B242C106800F07BA9 /* ViewController.swift */,
-				767D4A5D242C106800F07BA9 /* Main.storyboard */,
 				767D4A60242C106A00F07BA9 /* Assets.xcassets */,
 				760AB3742438AB1D002A4552 /* Model */,
-				765ABFB6243A5CEF00EB5948 /* MyFriendsController.swift */,
-				765ABFB8243A5D1700EB5948 /* MyFriendCell.swift */,
 				76AF96BA2440CC6B005DB4CB /* ImageView.swift */,
-				765ABFBC243A61B500EB5948 /* MyGroupCell.swift */,
-				765ABFBA243A619C00EB5948 /* MyGroupsController.swift */,
+				761DFF9A2444912B00CF9160 /* Groups */,
+				761DFF992444910C00CF9160 /* Friends */,
 				761DFF952443859D00CF9160 /* IconShadow.swift */,
-				765ABFC1243B2CB100EB5948 /* AllGroupsCell.swift */,
-				765ABFBF243B2C9100EB5948 /* AllGroupsController.swift */,
 				761DFF972443A77700CF9160 /* LikeButton.swift */,
-				765ABFC3243B4BF400EB5948 /* UserImgController.swift */,
-				765ABFC5243B4C0A00EB5948 /* UserImgCell.swift */,
 				767D4A62242C106A00F07BA9 /* LaunchScreen.storyboard */,
 				767D4A65242C106A00F07BA9 /* Info.plist */,
 			);
