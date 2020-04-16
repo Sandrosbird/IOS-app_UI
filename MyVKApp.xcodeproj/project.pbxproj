@@ -24,6 +24,7 @@
 		767D4A5F242C106800F07BA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767D4A5D242C106800F07BA9 /* Main.storyboard */; };
 		767D4A61242C106A00F07BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767D4A60242C106A00F07BA9 /* Assets.xcassets */; };
 		767D4A64242C106A00F07BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767D4A62242C106A00F07BA9 /* LaunchScreen.storyboard */; };
+		76A2485F244885CC000C6B03 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A2485E244885CC000C6B03 /* SearchBar.swift */; };
 		76AF96BB2440CC6B005DB4CB /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AF96BA2440CC6B005DB4CB /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		767D4A60242C106A00F07BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		767D4A63242C106A00F07BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		767D4A65242C106A00F07BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A2485E244885CC000C6B03 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		76AF96BA2440CC6B005DB4CB /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				761DFF952443859D00CF9160 /* IconShadow.swift */,
 				761DFF972443A77700CF9160 /* LikeButton.swift */,
 				767D4A62242C106A00F07BA9 /* LaunchScreen.storyboard */,
+				76A2485E244885CC000C6B03 /* SearchBar.swift */,
 				767D4A65242C106A00F07BA9 /* Info.plist */,
 			);
 			path = MyVKApp;
@@ -204,6 +207,7 @@
 				761DFF962443859D00CF9160 /* IconShadow.swift in Sources */,
 				765ABFC6243B4C0A00EB5948 /* UserImgCell.swift in Sources */,
 				765ABFCA243B4E4900EB5948 /* Group.swift in Sources */,
+				76A2485F244885CC000C6B03 /* SearchBar.swift in Sources */,
 				767D4A5C242C106800F07BA9 /* ViewController.swift in Sources */,
 				765ABFB7243A5CEF00EB5948 /* MyFriendsController.swift in Sources */,
 				765ABFBB243A619C00EB5948 /* MyGroupsController.swift in Sources */,

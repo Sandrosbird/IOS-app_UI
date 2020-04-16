@@ -5,14 +5,15 @@
 //  Created by Emil Mescheryakov on 05.04.2020.
 //  Copyright © 2020 Emil Mescheryakov. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 
-
 class MyFriendsController: UITableViewController {
-
     
+    var friends = FriendsFactory.mergeFriends()
+    lazy var friendsInAlphabetOrder = FriendsFactory.inAlphabetOrder(users: friends)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +27,9 @@ class MyFriendsController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return friends.count
+        return friendsInAlphabetOrder[section].1.count
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,11 +39,44 @@ class MyFriendsController: UITableViewController {
             }
         }
     }
-
     
+    //Подсчет количества секций для списка друзей UPD: не пригодилось, вывел через sectionNames.count
+//    func numberOfFriendsSections () -> Int {
+//        var characters = Set<Character>()
+//        //дикая конструкция, скорее всего нифига не KISS
+//        for var friend in friends {
+//            characters.insert(Character(extendedGraphemeClusterLiteral: friend.name.remove(at: friend.name.startIndex)))
+//        }
+//
+//        return characters.count
+//    }
+    
+    private func sectionsNames () -> [String] {
+        var characters = Set<String>()
+        //дикая конструкция#2, скорее всего нифига не KISS
+        for var friend in friends {
+            characters.insert(String(friend.name.remove(at: friend.name.startIndex)))
+        }
+        return Array(characters)
+    }
+    
+    
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+               
+        return sectionsNames().count
+    }
+
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        sectionsNames().sorted()
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! MyFriendCell
-        let friend = friends[indexPath.row]
+
+        let friend = friendsInAlphabetOrder[indexPath.section].1[indexPath.row]
+        cell.selectionStyle = .none
         cell.friendName.text = friend.name
         cell.friendIcon.image = friend.avatar
 
@@ -55,7 +84,21 @@ class MyFriendsController: UITableViewController {
         
         return cell
     }
+        
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "FriendCell")
+        var firstWordsArray = sectionsNames().sorted()
+        header?.textLabel?.text = firstWordsArray.removeFirst()
 
+        return header
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var firstWordsArray = sectionsNames().sorted()//вопрос для видеоразбора: это нужно или нет? если все сделать в переменной headerTitle выдаст ошибку Cannot use mutating member on immutable value: function call returns immutable value
+        let headerTitle = firstWordsArray.remove(at: section)
+        return headerTitle
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
