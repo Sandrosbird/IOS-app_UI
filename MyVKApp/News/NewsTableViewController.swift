@@ -50,6 +50,7 @@ class NewsController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell")
         return cell!.frame.height
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
