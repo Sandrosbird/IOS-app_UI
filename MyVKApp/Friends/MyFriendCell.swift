@@ -13,6 +13,7 @@ class MyFriendCell: UITableViewCell {
     
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendIcon: UIImageView!
+//    @IBOutlet weak var searchBar: UISearchBar!
     
     
     override func awakeFromNib() {

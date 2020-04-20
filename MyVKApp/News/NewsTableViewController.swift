@@ -1,31 +1,16 @@
 //
-//  MyGroupsController.swift
+//  NewsTableViewController.swift
 //  MyVKApp
 //
-//  Created by Emil Mescheryakov on 05.04.2020.
+//  Created by Emil Mescheryakov on 19.04.2020.
 //  Copyright © 2020 Emil Mescheryakov. All rights reserved.
 //
 
 import UIKit
 
-class MyGroupsController: UITableViewController {
-    
-    @IBAction func addGroup(seque: UIStoryboardSegue) {
-        if seque.identifier == "addGroup" {
-            guard let AllGroupsController = seque.source as? AllGroupsController else {return}
+class NewsTableViewController: UITableViewController {
 
-            if let indexPath = AllGroupsController.tableView.indexPathForSelectedRow {
-                let group = AllGroupsController.allGroups[indexPath.row]
-                if !myGroups.contains(group.self) {
-                    myGroups.append(group.self)
-                }
-                tableView.reloadData()
-            }
-        }
-    }
-    
-    
-    var myGroups: [Group] = []
+    var newsArray = NewsFactory.createNewsArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,17 +31,17 @@ class MyGroupsController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return myGroups.count
+        return newsArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! MyGroupCell
-        let group = myGroups[indexPath.row]
-        cell.groupName.text = group.name
-        cell.groupImg.image = group.titleImg
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
+        let news = newsArray[indexPath.row]
+        cell.newsCreatorName.text = news.newsCreatorUser!.name
+        cell.newsCreatorIcon.image = news.newsCreatorUser!.avatar
+        cell.newsTextField.text = news.newsText
+        cell.newsImage.image = news.newsImage[indexPath.row]
 
         return cell
     }
@@ -70,18 +55,17 @@ class MyGroupsController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            myGroups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
