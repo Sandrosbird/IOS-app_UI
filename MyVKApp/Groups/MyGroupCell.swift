@@ -20,9 +20,8 @@ class MyGroupCell: UITableViewCell {
         // Initialization code
         
         groupImg.layer.borderColor = UIColor.darkGray.cgColor
-                groupImg.layer.borderWidth = 1
-        //        friendIcon.layer.masksToBounds = true
-                clipsToBounds = true
+        groupImg.layer.borderWidth = 1
+        clipsToBounds = true
     }
     
     override func layoutSubviews() {

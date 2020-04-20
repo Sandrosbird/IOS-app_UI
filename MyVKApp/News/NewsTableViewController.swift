@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsTableViewController: UITableViewController {
+class NewsController: UITableViewController {
 
     var newsArray = NewsFactory.createNewsArray()
     
@@ -41,11 +41,15 @@ class NewsTableViewController: UITableViewController {
         cell.newsCreatorName.text = news.newsCreatorUser!.name
         cell.newsCreatorIcon.image = news.newsCreatorUser!.avatar
         cell.newsTextField.text = news.newsText
-        cell.newsImage.image = news.newsImage[indexPath.row]
+        cell.newsImage.image = news.newsImage[0]
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell")
+        return cell!.frame.height
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -55,17 +59,17 @@ class NewsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            // Delete the row from the data source
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        } else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }
+//    }
+    
 
     /*
     // Override to support rearranging the table view.

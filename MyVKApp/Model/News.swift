@@ -30,8 +30,8 @@ final class NewsFactory {
     static func createNewsArray() -> [News] {
         let friends = FriendsFactory.mergeFriends()
         let firstNews = News(newsText: "cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis", newsCreatorUser: friends[0], newsCreatorGroup: nil, newsImage: [UIImage(named: "forNews")!])
-        let secondNews = News(newsText: "cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis", newsCreatorUser: friends[1], newsCreatorGroup: nil, newsImage: [UIImage(named: "forNews")!])
-        let thirdNews = News(newsText: "cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis", newsCreatorUser: friends[2], newsCreatorGroup: nil, newsImage: [UIImage(named: "forNews")!])
+        let secondNews = News(newsText: "cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis", newsCreatorUser: friends[2], newsCreatorGroup: nil, newsImage: [UIImage(named: "forNews")!])
+        let thirdNews = News(newsText: "cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis", newsCreatorUser: friends[4], newsCreatorGroup: nil, newsImage: [UIImage(named: "forNews")!])
         return [firstNews, secondNews, thirdNews]
     }
 }
