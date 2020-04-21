@@ -14,7 +14,10 @@ class MyFriendCell: UITableViewCell {
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendIcon: UIImageView!
 //    @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var iconShadow: IconShadow!
+    @IBAction func resizeFriendIcon(_ sender: Any) {
+        iconShadow.resizeAnimation(iconShadow)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +39,10 @@ class MyFriendCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func resizingAnimation(_ forView: UIView) {
+        
     }
 
 }

@@ -18,15 +18,19 @@ class MainScreenView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-               
-        mainScreenLayer.colors = [
-            UIColor.white.cgColor,
-            UIColor.darkGray.cgColor]
-//        gradientLayer.locations = [0,1]
-        mainScreenLayer.startPoint = CGPoint.zero
-        mainScreenLayer.endPoint = CGPoint(x: 0, y: 1)
         
+        self.mainScreenLayer.colors = [
+                    UIColor.white.cgColor,
+                    UIColor.darkGray.cgColor]
+        //        gradientLayer.locations = [0,1]
+        self.mainScreenLayer.startPoint = CGPoint.zero
+        self.mainScreenLayer.endPoint = CGPoint(x: 0, y: 1)
     }
+
+    
+    
+    
+    
 }
 
 class ViewController: UIViewController {
@@ -48,6 +52,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         
         appNameLabel.text = "MyVKApp"
         loginLabel.text = "Login"

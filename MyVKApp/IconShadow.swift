@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable class IconShadow: UIView {
     
+    
     @IBInspectable
     var shadowColor: UIColor = .black   {
         didSet {
@@ -60,5 +61,19 @@ import UIKit
         
         layer.cornerRadius = bounds.height / 2
     }
+    
+    func resizeAnimation(_ animatedView: UIView){
+        let viewAnimation = CASpringAnimation(keyPath: "transform.scale")
+        viewAnimation.fromValue = 0.7
+        viewAnimation.toValue = 1
+        viewAnimation.stiffness = 200
+        viewAnimation.duration = 1
+        viewAnimation.beginTime = CACurrentMediaTime()
+        viewAnimation.fillMode = CAMediaTimingFillMode.backwards
+        animatedView.layer.add(viewAnimation, forKey: nil)
+    }
+    
+    
+    
     
 }
