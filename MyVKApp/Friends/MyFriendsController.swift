@@ -45,16 +45,7 @@ class MyFriendsController: UITableViewController {
         }
     }
     
-//Подсчет количества секций для списка друзей UPD: не пригодилось, вывел через sectionNames.count
-//    func numberOfFriendsSections () -> Int {
-//        var characters = Set<Character>()
-//        //дикая конструкция, скорее всего нифига не KISS
-//        for var friend in friends {
-//            characters.insert(Character(extendedGraphemeClusterLiteral: friend.name.remove(at: friend.name.startIndex)))
-//        }
-//
-//        return characters.count
-//    }
+
     
     private func sectionsNames () -> [String] {
         var characters = Set<String>()
