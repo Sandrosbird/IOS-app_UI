@@ -6,32 +6,10 @@
 //  Copyright © 2020 Emil Mescheryakov. All rights reserved.
 //
 
+import Foundation
 import UIKit
-
-class MainScreenView: UIView {
-    
-    var mainScreenLayer: CAGradientLayer { return layer as! CAGradientLayer }
-    
-    override class var layerClass: AnyClass {
-        return CAGradientLayer.self
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.mainScreenLayer.colors = [
-                    UIColor.white.cgColor,
-                    UIColor.darkGray.cgColor]
-        //        gradientLayer.locations = [0,1]
-        self.mainScreenLayer.startPoint = CGPoint.zero
-        self.mainScreenLayer.endPoint = CGPoint(x: 0, y: 1)
-    }
-
-    
-    
-    
-    
-}
+import WebKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -43,17 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
-    
-
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        
+       
         appNameLabel.text = "MyVKApp"
         loginLabel.text = "Login"
         passwordLabel.text = "Password"
@@ -70,8 +40,8 @@ class ViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
         
-        
-        
+            
+                                    
         
     }
     
@@ -98,10 +68,6 @@ class ViewController: UIViewController {
         }
     }
     
-
-    
-   
-    
     @objc func keyboardWasShown (notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo as! [String: Any]
         let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
@@ -114,5 +80,33 @@ class ViewController: UIViewController {
         scrollBottomConstraint.constant = 0
     }
         
+   
+    
+        
+        
+    
+    
+        
+}
+
+class MainScreenView: UIView {
+    
+    var mainScreenLayer: CAGradientLayer { return layer as! CAGradientLayer }
+    
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.self
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.mainScreenLayer.colors = [
+                    UIColor.white.cgColor,
+                    UIColor.darkGray.cgColor]
+        //        gradientLayer.locations = [0,1]
+        self.mainScreenLayer.startPoint = CGPoint.zero
+        self.mainScreenLayer.endPoint = CGPoint(x: 0, y: 1)
+    }
+    
 }
 
