@@ -11,6 +11,8 @@ import UIKit
 
 class MyFriendsController: UITableViewController {
     
+//    Session.instance.getFriends()
+    
     var friends = FriendsFactory.mergeFriends()
     lazy var friendsInAlphabetOrder = FriendsFactory.inAlphabetOrder(users: friends)
     var filteredFriends = [User]() {
@@ -28,6 +30,11 @@ class MyFriendsController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        Session.instance.getFriends()
+        
+        
+        
     }
 
     // MARK: - Table view data source

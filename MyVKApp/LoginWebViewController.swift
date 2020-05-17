@@ -30,8 +30,7 @@ class LoginWebViewController: UIViewController {
                     URLQueryItem(name: "display", value: "mobile"),
                     URLQueryItem(name: "response_type", value: "token"),
                     URLQueryItem(name: "scope", value: "262150"), //262150
-                    URLQueryItem(name: "v", value: "5.103"),
-                    URLQueryItem(name: "revoke", value: "1")
+                    URLQueryItem(name: "v", value: "5.103")
                 ]
         let request = URLRequest(url: urlForVK.url!)
         
@@ -47,7 +46,8 @@ class LoginWebViewController: UIViewController {
 }
 
 extension LoginWebViewController: WKNavigationDelegate {
-    private func loginWebView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         
         guard
             let url = navigationResponse.response.url,
@@ -69,21 +69,20 @@ extension LoginWebViewController: WKNavigationDelegate {
             }
             
         let token = parameters["access_token"]
+        let userId = parameters["user_id"]
         
-        print(token)
-        var loginToken = Session.instance.token
-        loginToken = token!
-
-        if loginToken != "" {
-            performSegue(withIdentifier: "webViewLogin", sender: token)
-        }
+      
+        
+        Session.instance.token = token!
+        Session.instance.userId = Int(userId!)!
+        
+//        print("token \(Session.instance.token)")
+//        print("userID \(Session.instance.userId)")
         
         decisionHandler(.cancel)
-        
+        performSegue(withIdentifier: "webViewLogin", sender: token)
+
     }
-    
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {}
-    
     
     
 }
